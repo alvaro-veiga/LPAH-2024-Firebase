@@ -1,19 +1,15 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAIghHY_F7AOh_EZwGFTySwfSUDuBCD2C4",
-    authDomain: "aula-37149.firebaseapp.com",
-    projectId: "aula-37149",
-    storageBucket: "aula-37149.appspot.com",
-    messagingSenderId: "729987422452",
-    appId: "1:729987422452:web:d1df75f811af17b36926a1"
-  };
+  apiKey: "AIzaSyBrRW0Lhlk4XOXU94iUtlNA5tNB6-id-sI",
+  authDomain: "lpah-20066.firebaseapp.com",
+  projectId: "lpah-20066",
+  storageBucket: "lpah-20066.appspot.com",
+  messagingSenderId: "853602249331",
+  appId: "1:853602249331:web:ae342296c9408112725806",
+  measurementId: "G-9PEQDSNPNW"
+};
 
-if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
-}
-
-const db = firebase.firestore();
-
-export default db;
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
